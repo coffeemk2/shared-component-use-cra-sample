@@ -1,3 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[!Movie](https://github.com/coffeemk2/shared-component-using-cra-sample/blob/master/movie.gif)
+
+<p align='center'>
+<img src='https://github.com/coffeemk2/shared-component-using-cra-sample/raw/master/movie.gif' width='600' alt=''>
+</p>
