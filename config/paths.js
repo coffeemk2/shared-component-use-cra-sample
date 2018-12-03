@@ -64,15 +64,16 @@ const resolveModule = (resolveFn, filePath) => {
 
   return resolveFn(`${filePath}.js`);
 };
+const ENTRY_NAME = process.env.ENTRY_NAME || 'user'
 
 // config after eject: we're in ./config/
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('build'),
-  appPublic: resolveApp('public'),
-  appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appBuild: resolveApp('build/' + ENTRY_NAME),
+  appPublic: resolveApp('public/' + ENTRY_NAME),
+  appHtml: resolveApp(`public/${ENTRY_NAME}/index.html`),
+  appIndexJs: resolveModule(resolveApp, `src/${ENTRY_NAME}/index`),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
